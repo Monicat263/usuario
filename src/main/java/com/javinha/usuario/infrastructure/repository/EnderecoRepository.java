@@ -1,4 +1,4 @@
-package com.javinha.aprendendospring.infrastructure.repository;
+package com.javinha.usuario.infrastructure.repository;
 
 import com.javinha.aprendendospring.infrastructure.entity.Endereco;
 import org.springframework.data.jpa.repository.JpaRepository;
