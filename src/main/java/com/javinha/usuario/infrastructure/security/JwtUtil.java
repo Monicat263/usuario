@@ -1,4 +1,4 @@
-package com.javinha.aprendendospring.infrastructure.security;
+package com.javinha.usuario.infrastructure.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtParser;

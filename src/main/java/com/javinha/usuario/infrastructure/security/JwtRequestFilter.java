@@ -1,4 +1,4 @@
-package com.javinha.aprendendospring.infrastructure.security;
+package com.javinha.usuario.infrastructure.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -13,7 +13,8 @@ import org.springframework.web.filter.OncePerRequestFilter;
 import java.io.IOException;
 
 // Define a classe JwtRequestFilter, que estende OncePerRequestFilter
-public class JwtRequestFilter extends OncePerRequestFilter {
+public class
+JwtRequestFilter extends OncePerRequestFilter {
 
     // Define propriedades para armazenar instâncias de JwtUtil e UserDetailsService
     private final JwtUtil jwtUtil;

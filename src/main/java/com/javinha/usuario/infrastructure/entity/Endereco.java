@@ -1,4 +1,4 @@
-package com.javinha.aprendendospring.infrastructure.entity;
+package com.javinha.usuario.infrastructure.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

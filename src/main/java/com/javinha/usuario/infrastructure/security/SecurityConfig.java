@@ -1,4 +1,4 @@
-package com.javinha.aprendendospring.infrastructure.security;
+package com.javinha.usuario.infrastructure.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

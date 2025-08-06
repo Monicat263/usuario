@@ -1,6 +1,6 @@
-package com.javinha.aprendendospring.infrastructure.repository;
+package com.javinha.usuario.infrastructure.repository;
 
-import com.javinha.aprendendospring.infrastructure.entity.Usuario;
+import com.javinha.usuario.infrastructure.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,7 +1,7 @@
-package com.javinha.aprendendospring.infrastructure.security;
+package com.javinha.usuario.infrastructure.security;
 
-import com.javinha.aprendendospring.infrastructure.entity.Usuario;
-import com.javinha.aprendendospring.infrastructure.repository.UsuarioRepository;
+import com.javinha.usuario.infrastructure.entity.Usuario;
+import com.javinha.usuario.infrastructure.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
