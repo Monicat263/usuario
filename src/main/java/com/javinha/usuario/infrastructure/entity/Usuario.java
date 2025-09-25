@@ -1,10 +1,7 @@
 package com.javinha.usuario.infrastructure.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
@@ -16,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor /*Construtor com argumentos*/
 @NoArgsConstructor /*Construtor sem argumentos*/
 @Entity            /*usado para indicar que esta classe se trata de uma tablea */
+@Builder
 @Table(name = "usuario") /*nome da tabela no bando de dados */
 public class Usuario implements UserDetails {
 
