@@ -4,6 +4,7 @@ import com.javinha.usuario.business.converter.UsuarioConverter;
 import com.javinha.usuario.business.dto.UsuarioDTO;
 import com.javinha.usuario.infrastructure.entity.Usuario;
 import com.javinha.usuario.infrastructure.exceptions.ConflictException;
+import com.javinha.usuario.infrastructure.exceptions.ResourcesNotFoundException;
 import com.javinha.usuario.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -51,4 +52,9 @@ public class UsuarioService {
         return usuarioRepository.existsByEmail(email);
     }
 
+
+    public Usuario buscaUsuarioByEmail(String email) {
+        return usuarioRepository.findByEmail(email).orElseThrow(
+                () -> new ResourcesNotFoundException("E-mail não cadastrado" + email));
+    }
 }
