@@ -17,7 +17,7 @@ public class JwtUtil {
     private final String secret = "minha-chave-super-secreta-e-bem-grande-para-o-HS256-funcionar";
     private final SecretKey secretKey = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
 
-    // Gera um token JWT com validade de 1 hora
+    // Gera um token JWT com validade de 1 hra
     public String generateToken(String username) {
         Date now = new Date();
         Date expiration = new Date(now.getTime() + 1000 * 60 * 60); // 1 hora
