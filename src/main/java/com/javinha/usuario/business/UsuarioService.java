@@ -9,6 +9,7 @@ import com.javinha.usuario.infrastructure.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 @RequiredArgsConstructor
@@ -57,4 +58,16 @@ public class UsuarioService {
         return usuarioRepository.findByEmail(email).orElseThrow(
                 () -> new ResourcesNotFoundException("E-mail não cadastrado" + email));
     }
+    @Transactional
+    public void deletaUsuarioByEmail(String email) {
+        // Valida se o usuário existe. Se não, ResourcesNotFoundException é lançada.
+        // O resultado da busca (o objeto Usuario) é ignorado, mas a validação ocorre.
+        usuarioRepository.findByEmail(email).orElseThrow(
+                () -> new ResourcesNotFoundException("E-mail não cadastrado" + email));
+        // Executa a deleção.
+        // Se o usuário não existe, a exceção acima já teria interrompido o método.
+        usuarioRepository.deleteByEmail(email);
+
+    }
 }
+

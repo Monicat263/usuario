@@ -44,11 +44,16 @@ public class UsuarioController {
     public ResponseEntity<Usuario> buscaUsuarioByEmail(@RequestParam("email") String email) {
         return ResponseEntity.ok(usuarioService.buscaUsuarioByEmail(email));
     }
-
+        // TODO: Necessario buscar informações por perfil
 //    @GetMapping("/perfil")
 //    public ResponseEntity<Usuario> getPerfil(Authentication authentication) {
 //        String emailDoUsuarioLogado = authentication.getName();
 //        return ResponseEntity.ok(usuarioService.buscaUsuarioByEmail(emailDoUsuarioLogado));
 //    }
+        @DeleteMapping("/{email}")
+        public ResponseEntity<Void> deletaUsuarioPorEmail(@PathVariable String email) {
+            usuarioService.deletaUsuarioByEmail(email);
+            return ResponseEntity.ok().build();
+        }
 
 }
